@@ -1,0 +1,6 @@
+C:\GitHubProjs\ExcelUploader\ExcelUploader\obj\Debug\ExcelUploader.csprojResolveAssemblyReference.cache
+C:\GitHubProjs\ExcelUploader\ExcelUploader\bin\ExcelUploader.dll.config
+C:\GitHubProjs\ExcelUploader\ExcelUploader\bin\ExcelUploader.dll
+C:\GitHubProjs\ExcelUploader\ExcelUploader\bin\ExcelUploader.pdb
+C:\GitHubProjs\ExcelUploader\ExcelUploader\obj\Debug\ExcelUploader.dll
+C:\GitHubProjs\ExcelUploader\ExcelUploader\obj\Debug\ExcelUploader.pdb

@@ -1,0 +1,81 @@
+E x c e l U p l o d a e r
+===========================
+
+In this project I tryed to solve a problem that allmost every programmer had to deal
+with at least one time - Getting data from an uploded excel sheet.
+
+There is a lot of ways to solve this, wheter in the server side or client side.
+Most of the problems comes from the client side.
+You don't know what version of office the client uses, so you need to add 
+some validation to the code before you call any ActiveX.
+Some times, due to organization regulation. using the Active X is blocked...
+In other cases the Active X rases errors with no explnation and only God knows
+what's the real problem is.
+The server side can couse you a security restictions as well as the need
+to use thierd party compennts.
+
+One solution is to decide that you deal only with CSV files. In that case you
+access the csv file as a text file.
+That's my prefferd way to tackle the problem.
+But sometimes the user wants to upload Excel file with more than one tab.
+
+So...
+I came with the idea of getting into the file itself and pull the data from it. 
+After a lot os stragles and head akes, I've manage to find the file structure and understad how it works.
+every excel file is actualy a Zip file (suprise, suprise). The last letter in 
+The suffix tells wether its only compressed file, locked, or what ever.
+Opennig the Excel file with winRaR will show some XML files in some hirarchy.
+One of them keeps the sheets list and other, one for each sheet, contains the data structure.
+another xml file have the text for every sheets (in order to avoid repeeting the same strings, 
+if any, in every file).
+That means that every cell i the excel represented by the xml file, has index, reffering to
+an xml entry in the common strings xml.
+I will not waste your time with this. you can find more information about it here :
+
+http://professor-excel.com/xml-zip-excel-file-structure/
+
+
+
+Getting Stated
+---------------
+
+
+System.IO.Compression
+System.IO.Compression.FileSystem
+
+Download the project and open it in the VS.
+Or you can just impplemant the .asp  and .asp.cs files in your project.
+
+You will need to add the references -
+
+System.IO.Compression
+System.IO.Compression.FileSystem
+
+to the project.
+
+
+Note that I added ValidateRequest="false" in the aspx page <% %> header in order to commit
+javascript commands from the code behined.
+
+I've used the w3.css library for the output table.
+So you can add it to the project as well (from here - https://www.w3schools.com/w3css/default.asp)
+but it'll work fine without this library so it is for you to decide.
+
+
+
+Author
+-----------
+Assaf Yshai
+www.assafyshai.co.il
+me@assafyshai.co.il
+
+
+
+
+License
+--------
+Use this code in any way you want as long as you do something good with it.
+
+
+
+
